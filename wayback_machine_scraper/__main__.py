@@ -31,6 +31,7 @@ def main():
         'AUTOTHROTTLE_START_DELAY': 1,
         'AUTOTHROTTLE_TARGET_CONCURRENCY': args.concurrency,
         'WAYBACK_MACHINE_TIME_RANGE': (getattr(args, 'from'), args.to),
+        'WAYBACK_MACHINE_INTERVAL': 'weekly', # don't get more than one snapshot a week
     })
 
     # start the crawler
